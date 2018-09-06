@@ -1,0 +1,41 @@
+############
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+###################################
+# Logs, databases and other files #
+###################################
+*.log
+*.sql
+*.sqlite
+.svn
+.thumbs
+svg.svg
+svg-symbols-demo-page.html
+
+######################
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.swp
+
+########
+# IDEs #
+########
+/.idea
+/.vscode

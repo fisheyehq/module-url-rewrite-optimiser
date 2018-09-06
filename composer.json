@@ -1,0 +1,24 @@
+{
+    "name": "fisheye/module-url-rewrite-optimiser",
+    "description": "A Magento 2 module that ...",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Fisheye Media Ltd.",
+            "homepage": "https://fisheye-webdesign.co.uk/"
+        },
+        {
+            "name": "John Hughes",
+            "email": "johnh@fisheyehq.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Fisheye\\UrlRewriteOptimiser\\": ""
+        }
+    }
+}
