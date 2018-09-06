@@ -1,8 +1,8 @@
 {
     "name": "fisheye/module-url-rewrite-optimiser",
-    "description": "A Magento 2 module that ...",
+    "description": "A Magento module that stops URL rewrites with category paths being generated for products when 'Use Categories Path for Product URLs' setting is disabled in config.",
     "type": "magento2-module",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Fisheye Media Ltd.",
