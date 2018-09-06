@@ -41,6 +41,7 @@ class RemoveCategoriesFromProductUrlRewriteGeneration
         $rootCategoryId = null
     ): array {
         if (!$this->config->generateCategoryUrlsForProductRewrites($storeId)) {
+            // Unset product categories to stop needless category path rewrites being created
             $productCategories = [];
         }
         return [$storeId, $productCategories, $product, $rootCategoryId];
