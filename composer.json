@@ -3,6 +3,9 @@
     "description": "A Magento module that stops URL rewrites with category paths being generated for products when 'Use Categories Path for Product URLs' setting is disabled in config.",
     "type": "magento2-module",
     "license": "MIT",
+    "require": {
+        "magento/module-catalog-url-rewrite": "^100.1"
+    },
     "authors": [
         {
             "name": "Fisheye Media Ltd.",
