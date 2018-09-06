@@ -8,19 +8,42 @@ A Magento module that stops URL rewrites with category paths being generated for
 * Stop needless URL rewrites for products that include category paths being created
 * Only applies when 'Use Categories Path for Product URLs' setting is set to 'No'
 
+> Note: this extension will only prevent category path based URL rewrites from being created.  Removing existing URL rewrites will need to be managed separately (though may be added in a future version).
+
+## Issue
+
+To highlight the issue (and purpose of this module) see the 2 scenarios below
+
+### Without module enabled
+
+![Without module enabled](./media/url-rewrites-with-categories.jpg)
+
+* 'Joust Duffle Bag' product is in 2 categories ('Gear' and 'Bags')
+* 4 product URL rewrite records are created for this product
+    * 1 for the direct product URL
+    * 3 for category path URLS (2 for the categories the product is associated to and also the root category...)  
+* Overall 580 product URL rewrite records are created (using Magento's default sample data of 189 visible products and 39 categories)
+
+### With module enabled
+
+![Without module enabled](./media/url-rewrites-without-categories.jpg)
+
+* 'Joust Duffle Bag' product  now just has 1 URL rewrite record for the direct path
+* Overall reduced to 189 product URL rewrite records (i.e. 1 per visible product)
+* Scale that up to thousands of products, categories, websites and store views and the space saved in the `url_rewrite` table could be huge!
+
 ## Compatibility
 
-* Magento Community Edition / Enterprise Edition 2.2.x
-* Supports Magento 2 Full Page Cache (including Varnish)
+* PHP 7.x
+* Magento Open Source / Commerce Edition 2.1.x / 2.2.x (may work on older versions, but untested)
 
 ## Installation
-This extension is hosted on Fisheye's packagist.com composer repo and should ALWAYS be installed from here (even when contributing - see below):
 
-* `composer require fisheye/module-url-rewrite-optimiser`
+```
+composer require fisheye/module-url-rewrite-optimiser
+php bin/magento module:enable Fisheye_UrlRewriteOptimiser
+php bin/magento setup:upgrade
+```
 
 ## Contributing
-For contributing still install via composer, however add the `--prefer-source` flag so that you get all the git repository details also (i.e. so you can push and pull to this repo).
-
-* `composer require --prefer-source fisheye/module-url-rewrite-optimiser`
-
-ALWAYS tag any new changes to the repo using [semantic versioning (semver)](http://semver.org/) so that packagist.com is updated and updates to existing installations can be considered properly.  Note this may occur after a pull request in most cases.
+Issues, forks and pull requests welcomed :)
