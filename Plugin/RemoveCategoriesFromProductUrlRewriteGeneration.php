@@ -11,9 +11,6 @@ use Magento\CatalogUrlRewrite\Model\ProductScopeRewriteGenerator;
 
 class RemoveCategoriesFromProductUrlRewriteGeneration
 {
-    /** Stores > Configuration paths */
-    const XML_PATH_CATALOG_SEO_PRODUCT_USE_CATEGORIES = 'catalog/seo/product_use_categories';
-
     /**
      * @var Config
      */
