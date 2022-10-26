@@ -1,28 +1,28 @@
 {
-  "name": "fisheye/module-url-rewrite-optimiser",
-  "description": "A Magento module that stops URL rewrites with category paths being generated for products when 'Use Categories Path for Product URLs' setting is disabled in config.",
-  "license": "MIT",
-  "type": "magento2-module",
-  "authors": [
-    {
-      "name": "Fisheye Media Ltd.",
-      "homepage": "https://fisheye-webdesign.co.uk/"
+    "name": "fisheye/module-url-rewrite-optimiser",
+    "description": "A Magento module that stops URL rewrites with category paths being generated for products when 'Use Categories Path for Product URLs' setting is disabled in config.",
+    "license": "MIT",
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "Fisheye Media Ltd.",
+            "homepage": "https://fisheye-webdesign.co.uk/"
+        },
+        {
+            "name": "John Hughes",
+            "email": "johnh@fisheyehq.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "magento/module-catalog-url-rewrite": "^100.1"
     },
-    {
-      "name": "John Hughes",
-      "email": "johnh@fisheyehq.com"
+    "autoload": {
+        "psr-4": {
+            "Fisheye\\UrlRewriteOptimiser\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
     }
-  ],
-  "require": {
-    "php": "^7.4 || ^8.0",
-    "magento/module-catalog-url-rewrite": "^100.1"
-  },
-  "autoload": {
-    "psr-4": {
-      "Fisheye\\UrlRewriteOptimiser\\": ""
-    },
-    "files": [
-      "registration.php"
-    ]
-  }
 }
